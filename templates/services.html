@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waste Management</title>
+    {% include 'style.html' %}
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="limiter" id="login">
+      <form method="POST" class="container-login100" style="background-image: url(https://www.gannett-cdn.com/-mm-/c4c53adca2900a14bb79e68d4b20551eeb795c12/c=0-31-1350-794/local/-/media/2016/10/31/DetroitFreePress/DetroitFreePress/636135335919148313-GFL-Truck.jpg);">
+        {% csrf_token %}
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <span class="login100-form-title">Services </span>
+              <span class="login100-form-subtitle m-b-16">
+                Add an service for recycling.
+              </span>
+            </div>
+            <div class="col-md-12">
+              <div class="wrap-login100">
+                <form class="login100-form validate-form">
+                  
+                  <div
+                    class="wrap-input100 validate-input m-b-16"
+                    data-validate="Valid email is required: ex@abc.xyz"
+                  >
+                    <input
+                      class="input100"
+                      type="text"
+                      name="username"
+                      placeholder="Unique Name"
+                    />
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                          </svg>
+                    </span>
+                  </div>
+                  <div
+                  class="wrap-input100 validate-input m-b-16"
+                  data-validate="Valid email is required: ex@abc.xyz"
+                >
+                  <input
+                    class="input100"
+                    type="text"
+                    name="real_name"
+                    placeholder="Full Name"
+                  />
+                  <span class="focus-input100"></span>
+                  <span class="symbol-input100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                        </svg>
+                  </span>
+                </div>
+                  <div
+                    class="wrap-input100 validate-input m-b-16"
+                    data-validate="Valid email is required: ex@abc.xyz"
+                  >
+                    <input
+                      class="input100"
+                      type="text"
+                      name="fathers_name"
+                      placeholder="Fathers Name"
+                    />
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                            <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                          </svg>
+                    </span>
+                  </div>
+
+                  <div
+                    class="wrap-input100 validate-input m-b-16"
+                    data-validate="Valid email is required: ex@abc.xyz"
+                  >
+                    <input
+                      class="input100"
+                      type="text"
+                      name="email"
+                      placeholder="email"
+                    />
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                          </svg>
+                    </span>
+                  </div>
+
+                  <div
+                    class="wrap-input100 validate-input m-b-16"
+                    data-validate="Valid email is required: ex@abc.xyz"
+                  >
+                    <input
+                      class="input100"
+                      type="text"
+                      name="address"
+                      placeholder="Address"
+                    />
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                          </svg>
+                    </span>
+                  </div>
+
+
+                  <div
+                    class="wrap-input100 validate-input m-b-16"
+                    data-validate="Valid email is required: ex@abc.xyz"
+                  >
+                    <input
+                      class="input100"
+                      type="text"
+                      name="phone"
+                      placeholder="Phone Number"
+                    />
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+</svg>
+                    </span>
+                  </div>
+
+                  <!-- <h6>Gender</h6>
+
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio1"
+                      value="option1"
+                    />
+                    <label class="form-check-label" for="inlineRadio1"
+                      >Male</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio2"
+                      value="option2"
+                    />
+                    <label class="form-check-label" for="inlineRadio2"
+                      >Female</label
+                    >
+                  </div> -->
+
+                  <div
+                    class="wrap-input100 validate-input m-b-16"
+                    data-validate="Valid email is required: ex@abc.xyz"
+                  >
+                    <input
+                      class="input100"
+                      type="text"
+                      name="password"
+                      placeholder="Password"
+                    />
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                          </svg>
+                    </span>
+                  </div>
+
+                  <div
+                    class="wrap-input100 validate-input m-b-16"
+                    data-validate="Password is required"
+                  >
+                    <input
+                      class="input100"
+                      type="password"
+                      name="confirm_password"
+                      placeholder="Confirm Password"
+                    />
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                          </svg>
+                    </span>
+                  </div>
+                  <div>
+                    <style>
+                        h5{
+                            color: red;
+                        }
+                    </style>
+                    {% for message in messages %}
+                    <h5>{{message}}</h5>
+                    {% endfor %}
+                </div>
+                  <div class="flex-sb-m w-full p-b-30">
+                    <div class="contact100-form-checkbox">
+                      <label class="" for="ckb1">
+                        Already have account ?
+                      </label>
+                    </div>
+                    <div>
+                      <a href="{% url 'signin' %}" class="txt1"> login </a>
+                    </div>
+                  </div>
+                  <div class="container-login100-form-btn p-t-25">
+                    <button type="submit" class="login100-form-btn">Sign Up</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    </form>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

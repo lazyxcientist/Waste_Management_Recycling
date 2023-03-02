@@ -1,12 +1,50 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Waste Management</title>
+    {% include 'style.html' %}
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
 </head>
 <body>
-    hughjk
+
+    <div
+    style=" height: 100vh;
+      background-image: url(https://www.gannett-cdn.com/-mm-/c4c53adca2900a14bb79e68d4b20551eeb795c12/c=0-31-1350-794/local/-/media/2016/10/31/DetroitFreePress/DetroitFreePress/636135335919148313-GFL-Truck.jpg);
+    ">
+    
+    <div class="header2 bg-success-gradiant">
+        {% include 'navbar.html' %}
+
+
+
+    </div>
+
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="full">
+                        <div class="main_heading text_align_center">
+                            <h2>Waste Management</h2>
+                            <p class="large">We are here to help you</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</div>
+
+
 </body>
 </html>
