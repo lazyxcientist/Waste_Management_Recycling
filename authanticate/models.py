@@ -1,17 +1,23 @@
+
+
+
 from django.db import models
 from django.contrib.auth import get_user_model
 import uuid
 from datetime import datetime
 from django.urls import reverse
-
+try:
+    from django.db.models import JSONField
+except ImportError:
+    from django.contrib.postgres.fields import JSONField
 
 User = get_user_model()
 
 # Create your models here.
-
 class Profile(models.Model):
     ids = models.UUIDField( default=uuid.uuid4)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    id_user = models.IntegerField()
 
     name = models.CharField(max_length=100)
     fathers_name = models.CharField(max_length=100)

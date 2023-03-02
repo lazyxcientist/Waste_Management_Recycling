@@ -17,6 +17,7 @@
   </head>
   <body>
     <form method="POST" class="limiter" id="login">
+      {% csrf_token %}
       <div
         class="container-login100"
         style="
@@ -40,7 +41,7 @@
                     <input
                       class="input100"
                       type="text"
-                      name="Username"
+                      name="username"
                       placeholder="Username"
                     />
                     <span class="focus-input100"></span>
@@ -57,7 +58,7 @@
                     <input
                       class="input100"
                       type="password"
-                      name="pass"
+                      name="password"
                       placeholder="Password"
                     />
                     <span class="focus-input100"></span>
@@ -68,12 +69,22 @@
                           </svg>
                     </span>
                   </div>
+                  <div>
+                    <style>
+                        h5{
+                            color: red;
+                        }
+                    </style>
+                    {% for message in messages %}
+                    <h5>{{message}}</h5>
+                    {% endfor %}
+                </div>
                   <div class="flex-sb-m w-full p-b-30">
                     <div class="contact100-form-checkbox">
                       <label class="" for="ckb1"> New User? </label>
                     </div>
                     <div>
-                      <a href="/auth/signup" class="txt1">
+                      <a href="{% url 'signup' %}" class="txt1">
                         Create an account
                       </a>
                     </div>

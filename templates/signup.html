@@ -36,7 +36,7 @@
                       class="input100"
                       type="text"
                       name="username"
-                      placeholder="Username"
+                      placeholder="Unique Name"
                     />
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
@@ -45,7 +45,23 @@
                           </svg>
                     </span>
                   </div>
-
+                  <div
+                  class="wrap-input100 validate-input m-b-16"
+                  data-validate="Valid email is required: ex@abc.xyz"
+                >
+                  <input
+                    class="input100"
+                    type="text"
+                    name="real_name"
+                    placeholder="Full Name"
+                  />
+                  <span class="focus-input100"></span>
+                  <span class="symbol-input100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                        </svg>
+                  </span>
+                </div>
                   <div
                     class="wrap-input100 validate-input m-b-16"
                     data-validate="Valid email is required: ex@abc.xyz"
@@ -183,6 +199,16 @@
                           </svg>
                     </span>
                   </div>
+                  <div>
+                    <style>
+                        h5{
+                            color: red;
+                        }
+                    </style>
+                    {% for message in messages %}
+                    <h5>{{message}}</h5>
+                    {% endfor %}
+                </div>
                   <div class="flex-sb-m w-full p-b-30">
                     <div class="contact100-form-checkbox">
                       <label class="" for="ckb1">
@@ -190,7 +216,7 @@
                       </label>
                     </div>
                     <div>
-                      <a href="/auth/signin" class="txt1"> login </a>
+                      <a href="{% url 'signin' %}" class="txt1"> login </a>
                     </div>
                   </div>
                   <div class="container-login100-form-btn p-t-25">
