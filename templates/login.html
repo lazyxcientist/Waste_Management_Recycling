@@ -1,0 +1,108 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waste Management</title>
+    {% include 'style.html' %}
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form method="POST" class="limiter" id="login">
+      <div
+        class="container-login100"
+        style="
+          background-image: url(https://www.gannett-cdn.com/-mm-/c4c53adca2900a14bb79e68d4b20551eeb795c12/c=0-31-1350-794/local/-/media/2016/10/31/DetroitFreePress/DetroitFreePress/636135335919148313-GFL-Truck.jpg);
+        "
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-5 col-md-offset-1">
+              <div class="wrap-login100">
+                <form class="login100-form validate-form">
+                  <span class="login100-form-title"> Login </span>
+                  <span class="login100-form-subtitle m-b-16">
+                    to your account
+                  </span>
+                  <div
+                    class="wrap-input100 validate-input m-b-16"
+                    data-validate="Valid email is required: ex@abc.xyz"
+                  >
+                    <input
+                      class="input100"
+                      type="text"
+                      name="Username"
+                      placeholder="Username"
+                    />
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                          </svg>
+                    </span>
+                  </div>
+                  <div
+                    class="wrap-input100 validate-input m-b-16"
+                    data-validate="Password is required"
+                  >
+                    <input
+                      class="input100"
+                      type="password"
+                      name="pass"
+                      placeholder="Password"
+                    />
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                          </svg>
+                    </span>
+                  </div>
+                  <div class="flex-sb-m w-full p-b-30">
+                    <div class="contact100-form-checkbox">
+                      <label class="" for="ckb1"> New User? </label>
+                    </div>
+                    <div>
+                      <a href="/auth/signup" class="txt1">
+                        Create an account
+                      </a>
+                    </div>
+                  </div>
+                  <div class="container-login100-form-btn p-t-25">
+                    <button type="submit" class="login100-form-btn">Login</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
