@@ -18,12 +18,12 @@ def profile(request):
             'user_object': user_object,
             'user_profile': user_profile,
 
-            'services': {"key":{"name":"hisd","from":"sss"},
-                         "kesfasy":{"name":"hisd","from":"sss"},
-                         "ke;ll;fsfy":{"name":"hisd","from":"sss"},
-                         "keomkmly":{"name":"hisd","from":"sss"},
-                         "kesmewy":{"name":"hisd","from":"sss"},
-                         }
+            # 'services': {"key":{"name":"hisd","from":"sss"},
+            #              "kesfasy":{"name":"hisd","from":"sss"},
+            #              "ke;ll;fsfy":{"name":"hisd","from":"sss"},
+            #              "keomkmly":{"name":"hisd","from":"sss"},
+            #              "kesmewy":{"name":"hisd","from":"sss"},
+            #              }
         }
 
         return render(request, 'profile.html', context)

@@ -14,26 +14,22 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <!-- <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
 </head>
 
 <body>
     
-    <div class="header2  bg-success-gradiant">
         {% include 'navbar.html' %}
 
 
 
-    </div>
-    <div id="snippetContent" class="container-login100" style="background-image: url(https://img.freepik.com/free-vector/gradient-grainy-gradient-texture_79603-1642.jpg);">
-        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-        <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <div id="snippetContent" class="container-login100" style="background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v1072-037-c-kvhh08mp.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=d1140632e48f03cd69f599fc6433c00a);">
+        
+        <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"> -->
         <div class="container bootstrap snippets bootdey">
             <div class="row">
                 <div class="profile-nav col-md-3">
-                    <div class="panel">
+                    <div class="panel gradient_bgs p-2">
                         <div class="user-heading round"> <a href="#"> <img
                                     src="https://cdn-icons-png.flaticon.com/512/5301/5301960.png" alt=""> </a>
                             <h1>{{user_profile.name}}</h1>
@@ -41,14 +37,12 @@
                         </div>
                         <ul class="nav nav-pills nav-stacked">
                             <li class="active"><a href="{% url 'profile' %}"> <i class="fa fa-user"></i> Profile</a></li>
-                            <!-- <li><a href="#"> <i class="fa fa-calendar"></i> Recent Activity <span
-                                        class="label label-warning pull-right r-activity">9</span></a></li> -->
                             <li><a href="{% url 'edit_profile' %}"> <i class="fa fa-edit"></i> Edit profile</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="profile-info col-md-9">
-                    <div class="panel">
+                    <div class="panel gradient_bgs p-2">
                         <div class="bio-graph-heading"> GarCoal 
                     </div>
                         <div class="panel-body bio-graph-info">
@@ -87,7 +81,7 @@
                             {% for ii ,jj in services.items %}
 
                             <div class="col-md-6">
-                                <div class="panel">
+                                <div class="panel gradient_bgs">
                                     <div class="panel-body">
                                         <div class="bio-chart">
                                             <div style="display:inline;width:100px;height:100px;"><canvas width="100"
@@ -115,15 +109,11 @@
 
         <script type="text/javascript"></script>
     </div>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-F1RTS0P1CD"></script>
-    <script>window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+    
 
-        gtag('config', 'G-F1RTS0P1CD');</script>
-
-
-
+<!-- <script type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
 <script
 src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

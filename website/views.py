@@ -27,7 +27,21 @@ def home(request):
     return render(request, 'index.html', context)
 
 def dashboard(request):
-    return render(request, 'dashboard.html')
+    if request.method == 'GET':
+
+        user_object = User.objects.get(username=request.user.username)
+        user_profile = Profile.objects.get(user=user_object)
+
+        all_services = Service_small.objects.filter(user_id=user_object)
+        
+        context = {
+            'user_object': user_object,
+            'user_profile': user_profile,
+            'all_services': all_services,
+            'auth': request.user.is_authenticated
+        }
+
+    return render(request, 'dashboard.html',context)
 
 def about(request):
     return render(request, 'about.html')
