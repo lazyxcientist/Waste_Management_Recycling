@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.contrib.auth.models import User, auth
 from authanticate.models import Profile
 from .models import *
+from django.contrib import messages
+
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
@@ -12,6 +14,7 @@ def maps(request):
     return render(request, 'maps.html')
 
 def home(request):
+    
     
     user_object = User.objects.get(username=request.user.username)
     user_profile = Profile.objects.get(user=user_object)
@@ -23,6 +26,14 @@ def home(request):
         'user_profile': user_profile,
         'auth': request.user.is_authenticated
     }
+
+    if request.method == 'POST':
+        pins = request.POST['zip_code']
+        if pins in ['302001','333001']:
+            messages.info(request, 'Congartess !! We are available in your area.')
+        else:
+            messages.info(request, 'Sorry !! We are not available in your area yet')
+        return render(request, 'index.html', context)
 
     return render(request, 'index.html', context)
 
