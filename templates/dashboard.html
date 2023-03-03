@@ -19,12 +19,13 @@
 
     <div class="container-login100"
     style=" 
-      background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v1072-037-c-kvhh08mp.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=d1140632e48f03cd69f599fc6433c00a);
+      background-image: url(https://firebasestorage.googleapis.com/v0/b/xp-website-9b131.appspot.com/o/assets%2F%23colorful%20%23abstract%20%23iphonewallpaper.png?alt=media&token=c7807f85-7957-46af-ae96-1c5ed7b06623);
     ">
     
     
-    <div class=" col-md-12 ">
-        <div class=" text-center " style="padding: -20px;" >
+    <section  class=" col-md-12 ">
+    <div class=" col-md-12 " width="100%" height="100%">
+        <div class=" text-center text-success" style="padding: -20px;" >
           <h3 class="name">Dash Board</h3>
       </div>
     </div>
@@ -36,7 +37,7 @@
                 <div class="rounded">
                     <div class="table-responsive table-borderless">
                         <table class="table ">
-                            <thead >
+                            <thead class="bg-success">
                                 <tr>
                                     <th>User Name</th>
                                     <th>PIN</th>
@@ -49,17 +50,28 @@
 
                             <tbody class="table-body ">
                                 
-                            {% for ii in all_services %}
-                                <tr class="cell-1 gradient_bgs p-5">
+                                {% if all_services %}
 
-                                    <td>{{ii.user_name}}</td>
-                                    <td><span class="badge badge-success">{{ii.zip_code}}</span></td>
-                                    <td>{{ii.house_no}}</td>
-                                    <td>{{ii.starting_date}}</td>
-                                    <td>{{ii.ending_date}}</td>
-                                    <td><i class="fa fa-ellipsis-h text-black-50"></i></td>
-                                </tr>
+                                {% for ii in all_services %}
+                                    <tr class="cell-1 gradient_bgs p-5" >
+
+                                        <td>{{ii.user_name}}</td>
+                                        <td><span class="badge badge-success">{{ii.zip_code}}</span></td>
+                                        <td>{{ii.house_no}}</td>
+                                        <td>{{ii.starting_date}}</td>
+                                        <td>{{ii.ending_date}}</td>
+                                        <td><i class="fa fa-ellipsis-h text-black-50"></i></td>
+                                    </tr>
+
                             {% endfor %}
+                            {% else %}
+                            <div class="align-items-center">
+                                
+                            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/search-not-found-5342748-4468820.png" height="100px"/>
+                            <h1 class="bg-primary">No data found !!!</h1>
+                            </div>
+                            {% endif %}
+
                             
                             </tbody>
                         </table>
@@ -69,7 +81,7 @@
         </div>
     </div>
 
-
+</section>
    
 
 </div>
