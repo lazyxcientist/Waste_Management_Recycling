@@ -18,6 +18,7 @@ class Subscription(models.Model):
 
 class Reward_product(models.Model):
 
+
     title = models.CharField(max_length=100)
     discription = models.TextField(default=0)
     points_required = models.IntegerField(default=0)
