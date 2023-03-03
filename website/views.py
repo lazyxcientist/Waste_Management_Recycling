@@ -110,3 +110,18 @@ def rewards(request):
         'auth': request.user.is_authenticated
     }
     return render(request, 'rewards.html', context)
+
+
+@ login_required(login_url='signin')
+def payment(request):
+    user_object = User.objects.get(username=request.user.username)
+    user_profile = Profile.objects.get(user=user_object)
+
+
+
+    context = {
+        'user_object': user_object,
+        'user_profile': user_profile,
+        'auth': request.user.is_authenticated
+    }
+    return render(request, 'payement.html' , context)
