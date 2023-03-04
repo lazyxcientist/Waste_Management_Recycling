@@ -6,6 +6,7 @@ from .models import *
 from django.contrib import messages
 import folium
 import geocoder
+import stripe
 
 from django.contrib.auth.decorators import login_required
 
@@ -46,7 +47,7 @@ def home(request):
         }
         return render(request, 'index.html', context)
 
-
+@login_required(login_url='signin')
 def dashboard(request):
     if request.method == 'GET':
 
@@ -64,6 +65,7 @@ def dashboard(request):
 
     return render(request, 'dashboard.html',context)
 
+@login_required(login_url='signin')
 def about(request):
     return render(request, 'about.html')
 

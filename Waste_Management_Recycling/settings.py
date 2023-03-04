@@ -26,6 +26,14 @@ SECRET_KEY = 'django-insecure--72x*0&&=i^46plktcs+ve@cac-mnk$0f$=t8lgouwkjxlp=u=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
+STRIPE_PUBLISHABLE_KEY = 'test_publishable_key'
+STRIPE_SECRET_KEY = 'test_secret_key'
+# Uncomment these lines if you have a live keys
+# else:
+#     STRIPE_PUBLISHABLE_KEY = 'production_publishable_key'
+#     STRIPE_SECRET_KEY = 'production_secret_key'
+
 ALLOWED_HOSTS = ['waste-man.onrender.com','127.0.0.1']
 
 
