@@ -9,4 +9,6 @@ urlpatterns = [
     path('maps',views.maps,name='maps'),
     path('rewards',views.rewards,name='rewards'),
     path('payment',views.payment,name='payment'),
+    path('admin_page',views.admin_page,name='admin_page'),
+    
 ]

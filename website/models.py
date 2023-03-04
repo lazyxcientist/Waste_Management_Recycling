@@ -23,7 +23,7 @@ class Service_small(models.Model):
     user_phone = models.IntegerField()
     user_phone2 = models.IntegerField()
 
-
+    service_status = models.CharField(max_length=100, default='pending')
     starting_date = models.DateField( default=datetime.now())
     ending_date = models.DateField(default=datetime.now())
 
@@ -34,6 +34,7 @@ class Service_details(models.Model):
 
     user_id = models.CharField(max_length=100)
     service_id = models.UUIDField(primary_key=True, default=uuid.uuid4)
+
 
     starting_date = models.DateField()
     ending_date = models.DateField()

@@ -41,7 +41,7 @@
                                 <tr style="background: #4e68e8;">
                                     <th>User Name</th>
                                     <th>PIN</th>
-                                    <th>House no</th>
+                                    <th>subscription</th>
                                     <th>Starting Date</th>
                                     <th>Ending Date</th>
                                     <th></th>
@@ -57,7 +57,12 @@
 
                                         <td>{{ii.user_name}}</td>
                                         <td><span class="badge badge-success">{{ii.zip_code}}</span></td>
-                                        <td>{{ii.house_no}}</td>
+                                        {% if ii.service_status == "pending" %}
+                                        <input hidden type="text" value="{{ii.service_id}}" name="id" id="id">
+                                            <td><a href="{% url 'payment'%}" type="btn btn-danger " >{{ii.service_status}}</a></td>
+                                        {% else %}
+                                            <td>{{ii.service_status}}</td>
+                                        {% endif %}
                                         <td>{{ii.starting_date}}</td>
                                         <td>{{ii.ending_date}}</td>
                                         <td><i class="fa fa-ellipsis-h text-black-50"></i></td>

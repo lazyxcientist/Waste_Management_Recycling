@@ -43,7 +43,7 @@
                 </div>
                 <div class="profile-info col-md-9">
                     <div class="panel gradient_bgs p-2">
-                        <div class="bio-graph-heading"> GarCoal 
+                        <div class="bio-graph-heading"> {{user_profile.user_status}} 
                     </div>
                         <div class="panel-body bio-graph-info">
                             <h1>USER PROFILE</h1>
@@ -76,6 +76,24 @@
                         </div>
                     </div>
                     <div>
+
+                        <div class="p-5">
+
+
+                        {% if user_profile.user_status == 'admin' %}
+                        <a href="/admin_page" class="btn btn-primary">Admin Page</a>
+                        
+                        {% elif user_profile.user_status == 'picker' %}
+                        <a href="/picker_page" class="btn btn-primary">Gargabe Picking Page</a>
+                        {% elif user_profile.user_status == 'user' %}
+
+                        {% endif %}
+
+
+
+                        </div>
+
+
                         <div class="row">
 
                             {% for ii ,jj in services.items %}

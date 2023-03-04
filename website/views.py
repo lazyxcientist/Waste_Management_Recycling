@@ -4,6 +4,8 @@ from django.contrib.auth.models import User, auth
 from authanticate.models import Profile
 from .models import *
 from django.contrib import messages
+import folium
+import geocoder
 
 from django.contrib.auth.decorators import login_required
 
@@ -112,12 +114,10 @@ def rewards(request):
     return render(request, 'rewards.html', context)
 
 
-@ login_required(login_url='signin')
+@login_required(login_url='signin')
 def payment(request):
     user_object = User.objects.get(username=request.user.username)
     user_profile = Profile.objects.get(user=user_object)
-
-
 
     context = {
         'user_object': user_object,
@@ -125,3 +125,62 @@ def payment(request):
         'auth': request.user.is_authenticated
     }
     return render(request, 'payement.html' , context)
+
+
+@login_required(login_url='signin')
+def picker_page(request):
+    user_object = User.objects.get(username=request.user.username)
+    user_profile = Profile.objects.get(user=user_object)
+
+    if user_profile.user_status == 'picker':
+        location = geocoder.osm('india, rajasthan, pilani bkbiet college')
+        m = folium.Map(location=[location.lat, location.lng], zoom_start=12, tiles='Stamen Terrain')
+        folium.Marker([location.lat, location.lng],tooltip='click', popup='Mt. Hood Meadows').add_to(m)
+        m = m._repr_html_()
+
+
+        context = {
+            'user_object': user_object,
+            'user_profile': user_profile,
+            'auth': request.user.is_authenticated,
+            'm': m,
+        }
+        return render(request, 'picker_page.html' , context)
+    else:
+        return redirect('profile')
+
+
+@login_required(login_url='signin')
+def admin_page(request):
+    user_object = User.objects.get(username=request.user.username)
+    user_profile = Profile.objects.get(user=user_object)
+
+    if True: # user_profile.user_status == 'admin':
+
+        context = {
+            'user_object': user_object,
+            'user_profile': user_profile,
+            'auth': request.user.is_authenticated
+        }
+        if request.method == 'POST':
+            datas = request.POST
+            datas = datas.keys()
+                
+            
+
+            if 'user_picker' in datas:
+                user_picker = request.POST['user_picker']
+                user = request.POST['user']
+                new_object = User.objects.get(username=user)
+                new =Profile.objects.get(user=new_object)
+                new.user_status = user_picker
+                new.save()
+
+            if 'search' in datas:
+                searchs = request.POST['search']
+                context['users_list'] = Profile.objects.filter(user_id__username__icontains=searchs)
+
+        return render(request, 'admin_page.html' , context)
+
+    else:
+        return redirect('profile')

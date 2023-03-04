@@ -1,0 +1,382 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waste Management</title>
+    {% include 'style.html' %}
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <style>
+
+
+        @import url(https://unpkg.com/@webpixels/css@1.1/dist/index.css);
+
+
+        .card-header {
+     padding: .75rem 1.25rem;
+     margin-bottom: 0;
+     background-color: rgba(19, 24, 44, .03);
+     border-bottom: 1px solid rgba(19, 24, 44, .125)
+ }
+
+ .card-header:first-child {
+     border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0
+ }
+
+ .card-footer,
+ .card-header {
+     background-color: transparent;
+     border-color: rgba(160, 175, 185, .15);
+     background-clip: padding-box
+ }
+
+
+
+
+
+
+
+            </style>
+            <script src="https://cdn.jsdelivr.net/npm/less@4.1.1" ></script>
+</head>
+<body>
+        {% include 'navbar.html' %}
+
+    <div class="container-login100"
+    style=" 
+      background-image: url(https://firebasestorage.googleapis.com/v0/b/xp-website-9b131.appspot.com/o/assets%2F%23colorful%20%23abstract%20%23iphonewallpaper.png?alt=media&token=c7807f85-7957-46af-ae96-1c5ed7b06623);
+    ">
+    
+    <div class="h-screen flex-grow-1 overflow-y-lg-auto">
+        
+        <main class="py-6 ">
+            <div class="container-fluid">
+                <!-- Card stats -->
+                <div class="row g-6 mb-6">
+                    <div class="col-xl-3  col-12">
+                        <div class="card shadow border-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Budget</span>
+                                        <span class="h3 font-bold mb-0">$750.90</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
+                                            <i class="bi bi-credit-card"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-2 mb-0 text-sm">
+                                    <span class="badge badge-pill bg-soft-success text-success me-2">
+                                        <i class="bi bi-arrow-up me-1"></i>13%
+                                    </span>
+                                    <span class="text-nowrap text-xs text-muted">Since last month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3  col-12">
+                        <div class="card shadow border-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">New projects</span>
+                                        <span class="h3 font-bold mb-0">215</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-primary text-white text-lg rounded-circle">
+                                            <i class="bi bi-people"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-2 mb-0 text-sm">
+                                    <span class="badge badge-pill bg-soft-success text-success me-2">
+                                        <i class="bi bi-arrow-up me-1"></i>30%
+                                    </span>
+                                    <span class="text-nowrap text-xs text-muted">Since last month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3   col-12">
+                        <div class="card shadow border-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Total hours</span>
+                                        <span class="h3 font-bold mb-0">1.400</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-info text-white text-lg rounded-circle">
+                                            <i class="bi bi-clock-history"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-2 mb-0 text-sm">
+                                    <span class="badge badge-pill bg-soft-danger text-danger me-2">
+                                        <i class="bi bi-arrow-down me-1"></i>-5%
+                                    </span>
+                                    <span class="text-nowrap text-xs text-muted">Since last month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3  col-12">
+                        <div class="card shadow border-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Work load</span>
+                                        <span class="h3 font-bold mb-0">95%</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-warning text-white text-lg rounded-circle">
+                                            <i class="bi bi-minecart-loaded"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-2 mb-0 text-sm">
+                                    <span class="badge badge-pill bg-soft-success text-success me-2">
+                                        <i class="bi bi-arrow-up me-1"></i>10%
+                                    </span>
+                                    <span class="text-nowrap text-xs text-muted">Since last month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form method="POST" class="card shadow border-0 mb-7">
+                    {% csrf_token %}
+                    <div class="card-header">
+                        <div
+                    class="wrap-input100 validate-input m-b-16"
+                    data-validate="Valid email is required: ex@abc.xyz"
+                  >
+                    <input
+                      class="input100"
+                      type="text"
+                      name="search"
+                      placeholder="Username"
+                    />
+                    <span class="focus-input100"><Button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg></Button></span>
+                    <span class="symbol-input100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                          </svg>
+                    </span>
+                  </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-nowrap">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Gender</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">type</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for user in users_list %}
+                                <tr>
+                                    <input hidden name="user" value="{{user.user}}">
+                                    <td>
+                                        <img alt="..." src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="avatar avatar-sm rounded-circle me-2">
+                                        <a class="text-heading font-semibold" href="#">
+                                            {{user.name}}
+                                        </a>
+                                    </td>
+                                    <td>
+                                        {% if user.gender %}
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gender-male" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2H9.5zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
+                                          </svg>
+                                        {% else %}
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gender-female" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5z"/>
+                                          </svg>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+
+                                        {{user.user_status}}
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-lg badge-dot">
+
+                                            <select name="user_picker" value="{{user.user_status}}" id="cars">
+                                                <option value="user" >user</option>
+                                                <option value="admin" >admin</option>
+                                                <option value="picker" >picker</option>
+                                              </select>
+                                            <!-- <i class="bg-success"></i>{{user.user_status}} -->
+                                        </span>
+                                    </td>
+                                    <td class="btn">
+                                        <button type="submit" class="btn btn-sm btn-square btn-neutral text-danger-hover">
+                                            Change
+                                        </button>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+
+                <div class="page-content page-container" id="page-content">
+                    <div class="padding">
+                        <div class="row">
+                            <div class="container-fluid d-flex justify-content-center">
+                                <div class="col-sm-8 col-md-6">
+                                    <div class="card">
+                                        <div class="card-header">Bar chart</div>
+                                        <div class="card-body" style="height: 420px">
+                                            <div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                                                <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                                    <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
+                                                </div>
+                                                <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                                    <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+                                                </div>
+                                            </div> <canvas id="chart-line" width="299" height="200" class="chartjs-render-monitor" style="display: block; width: 299px; height: 200px;"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="page-content page-container" id="page-content">
+                    <div class="padding">
+                        <div class="row">
+                            <div class="container-fluid d-flex justify-content-center">
+                                <div class="col-sm-8 col-md-6">
+                                    <div class="card">
+                                        <div class="card-header">Doughnut chart</div>
+                                        <div class="card-body" style="height: 420px">
+                                            <div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                                                <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                                    <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
+                                                </div>
+                                                <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                                    <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+                                                </div>
+                                            </div> <canvas id="chart-line" width="299" height="200" class="chartjs-render-monitor" style="display: block; width: 299px; height: 200px;"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+        
+
+   
+
+</div>
+
+<script>
+    $(document).ready(function() {
+        var ctx = $("#chart-line");
+        var myLineChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: [1500, 1600, 1700, 1750, 1800, 1850, 1900, 1950, 1999, 2050],
+                datasets: [{
+                    data: [86, 114, 106, 106, 107, 111, 133, 221, 783, 2478],
+                    label: "Africa",
+                    borderColor: "#458af7",
+                    backgroundColor:'#458af7',
+                    fill: false
+                }, {
+                    data: [282, 350, 411, 502, 635, 809, 947, 1402, 3700, 5267],
+                    label: "Asia",
+                    borderColor: "#8e5ea2",
+                    fill: true,
+                    backgroundColor:'#8e5ea2'
+                    
+                }, {
+                    data: [168, 170, 178, 190, 203, 276, 408, 547, 675, 734],
+                    label: "Europe",
+                    borderColor: "#3cba9f",
+                    fill: false,
+                    backgroundColor:'#3cba9f'
+                    
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'World population per region (in millions)'
+                }
+            }
+        });
+    });
+
+
+
+
+
+
+
+
+
+
+    $(document).ready(function() {
+        var ctx = $("#chart-line");
+        var myLineChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ["Spring", "Summer", "Fall", "Winter"],
+                datasets: [{
+                    data: [1200, 1700, 800, 200],
+                    backgroundColor: ["rgba(255, 0, 0, 0.5)", "rgba(100, 255, 0, 0.5)", "rgba(200, 50, 255, 0.5)", "rgba(0, 100, 255, 0.5)"]
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Weather'
+                }
+            }
+        });
+    });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js'></script>
+
+<script
+src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+crossorigin="anonymous"
+></script>
+</body>
+</html>
