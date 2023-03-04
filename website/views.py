@@ -17,27 +17,35 @@ def maps(request):
 
 def home(request):
     
-    
-    user_object = User.objects.get(username=request.user.username)
-    user_profile = Profile.objects.get(user=user_object)
+    if request.user.username:
+        user_object = User.objects.get(username=request.user.username)
+        user_profile = Profile.objects.get(user=user_object)
 
 
 
-    context = {
-        'user_object': user_object,
-        'user_profile': user_profile,
-        'auth': request.user.is_authenticated
-    }
+        context = {
+            'user_object': user_object,
+            'user_profile': user_profile,
+            'auth': request.user.is_authenticated
+        }
 
-    if request.method == 'POST':
-        pins = request.POST['zip_code']
-        if pins in ['302001','333001']:
-            messages.info(request, 'Congartess !! We are available in your area.')
-        else:
-            messages.info(request, 'Sorry !! We are not available in your area yet')
+        if request.method == 'POST':
+            pins = request.POST['zip_code']
+            if pins in ['302001','333001']:
+                messages.info(request, 'Congartess !! We are available in your area.')
+            else:
+                messages.info(request, 'Sorry !! We are not available in your area yet')
+            return render(request, 'index.html', context)
+
+        return render(request, 'index.html', context)
+    else:
+        context = {
+            # 'user_object': user_object,
+            # 'user_profile': user_profile,
+            'auth': False
+        }
         return render(request, 'index.html', context)
 
-    return render(request, 'index.html', context)
 
 def dashboard(request):
     if request.method == 'GET':
@@ -132,18 +140,35 @@ def picker_page(request):
     user_object = User.objects.get(username=request.user.username)
     user_profile = Profile.objects.get(user=user_object)
 
-    if user_profile.user_status == 'picker':
-        location = geocoder.osm('india, rajasthan, pilani bkbiet college')
-        m = folium.Map(location=[location.lat, location.lng], zoom_start=12, tiles='Stamen Terrain')
-        folium.Marker([location.lat, location.lng],tooltip='click', popup='Mt. Hood Meadows').add_to(m)
+    if True: #user_profile.user_status == 'picker':
+        location_list = ["india rajasthan jaipur  hawa mahal", "india rajasthan jaipur  jal mahal", "india rajasthan jaipur  amer fort", "india rajashtan jaipur  city palace", "india rajasthan jaipur  jantar mantar", "india rajasthan jaipur  nahargarh fort", "india rajasthan jaipur  jal mahal", "india rajasthan jaipur  amer fort", "india rajashtan jaipur  city palace", "india rajasthan jaipur  jantar mantar", "india rajasthan jaipur  nahargarh fort"]
+        lll =  geocoder.osm("india rajasthan jaipur  hawa mahal")
+        m = folium.Map(location=[lll.lat,lll.lng], zoom_start=12, tiles='Stamen Terrain')
+        for ii in location_list:
+            localss = str(ii)
+            print(localss)
+            if localss:
+                location = geocoder.osm(localss)
+                print(location)
+                if location:
+                    folium.Marker([location.lat, location.lng],tooltip='click', popup='Mt. Hood Meadows').add_to(m)
         m = m._repr_html_()
 
+
+        # user_lists_service = Service_small.objects.all()
+        # user_lists = []
+        # for iis in user_lists_service:
+
+        #     kd = Profile.objects.get(user = User.objects.get(username=iis))
+        #     user_lists.append(kd)
+        user_lists = Profile.objects.all()
 
         context = {
             'user_object': user_object,
             'user_profile': user_profile,
             'auth': request.user.is_authenticated,
             'm': m,
+            'users_list': user_lists,
         }
         return render(request, 'picker_page.html' , context)
     else:

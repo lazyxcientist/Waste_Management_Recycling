@@ -10,5 +10,6 @@ urlpatterns = [
     path('rewards',views.rewards,name='rewards'),
     path('payment',views.payment,name='payment'),
     path('admin_page',views.admin_page,name='admin_page'),
+    path('picker_page',views.picker_page,name='picker_page'),
     
 ]
