@@ -17,6 +17,7 @@ def profile(request):
         context = {
             'user_object': user_object,
             'user_profile': user_profile,
+            'auth': request.user.is_authenticated,
 
             # 'services': {"key":{"name":"hisd","from":"sss"},
             #              "kesfasy":{"name":"hisd","from":"sss"},
@@ -39,7 +40,7 @@ def profile_edit(request):
     context = {
         'user_object': user_object,
         'user_profile': user_profile,
-
+        'auth': request.user.is_authenticated,
         'services': {"key":{"name":"hisd","from":"sss"},
                         "kesfasy":{"name":"hisd","from":"sss"},
                         "ke;ll;fsfy":{"name":"hisd","from":"sss"},
@@ -132,7 +133,7 @@ def signup(request):
                 new_profile.save()
 
                 
-                return redirect('/profile')
+                return redirect('/')
         else:
             messages.info(request, 'Password Not Matching')
             return redirect('signup')
@@ -149,7 +150,7 @@ def signin(request):
 
         if user is not None:
             auth.login(request, user)
-            return redirect('profile')
+            return redirect('/')
         else:
             messages.info(request, 'Credentials Invalid')
             return redirect('signin')
