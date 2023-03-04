@@ -27,8 +27,8 @@ SECRET_KEY = 'django-insecure--72x*0&&=i^46plktcs+ve@cac-mnk$0f$=t8lgouwkjxlp=u=
 DEBUG = True
 
 
-STRIPE_PUBLISHABLE_KEY = 'test_publishable_key'
-STRIPE_SECRET_KEY = 'test_secret_key'
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51Mh5VASAbfoveXTQWNvx7bq7oLZHGsAcSxjbVJtgjLFCb4WkXxeAPYBG8vUfm0LL03yUbvsR7el2NgiEl9U9SrQP00wwvHDCpp'
+STRIPE_SECRET_KEY = 'sk_test_51Mh5VASAbfoveXTQVnRMx1qeqacujWBYgrcoXhjmOnprGzqrS0cormicvHcUGTNlyUmNqZOIqTQBD62FGwYXIDWW00GBjQQihq'
 # Uncomment these lines if you have a live keys
 # else:
 #     STRIPE_PUBLISHABLE_KEY = 'production_publishable_key'
