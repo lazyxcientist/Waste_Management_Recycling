@@ -2,12 +2,13 @@
 
 this website is build for Purnima hackathon, jaipur
 
-  with team
-    1. pankaj
-    2. mayur
-    3. devesh 
-    4. satyarth
-
+`
+    with team
+      1. pankaj
+      2. mayur
+      3. devesh 
+      4. satyarth
+`
     
 -----------
 
@@ -32,4 +33,5 @@ step 2. run this on django server
   screenshots
 
   <img src="Screenshot from 2023-09-11 10-55-41.png"/>
+  <img src="Screenshot from 2023-09-11 10-57-47.png"/>
     
