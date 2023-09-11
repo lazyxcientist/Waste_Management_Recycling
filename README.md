@@ -23,10 +23,13 @@ step 1. install all requirements
 
 step 2. run this on django server
 
-  django manage.py runserver
+
+    django manage.py runserver
 
 
 -------------
 
   screenshots
+
+  <img src="Screenshot from 2023-09-11 10-55-41.png"/>
     
